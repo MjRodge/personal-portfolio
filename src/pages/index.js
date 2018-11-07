@@ -36,7 +36,7 @@ export const projectQuery = graphql`
           name
           publishedDate
           image {
-            fluid(maxWidth: 400) {
+            fluid(maxWidth: 1600, maxHeight: 1600) {
               ...GatsbyContentfulFluid
             }
           }

@@ -1,5 +1,9 @@
 import React from 'react'
 import Img from 'gatsby-image'
+import Button from '@material-ui/core/Button'
+import Paper from '@material-ui/core/Paper'
+
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 
 import './styles/projects.css'
 
@@ -13,12 +17,33 @@ class Projects extends React.Component {
             <Img fluid={node.image.fluid} className="project-image" />
             <div className="project-info">
               <h2>{node.name}</h2>
-              {node.tech.map(tech => (
-                <p key={tech}>{tech}</p>
-              ))}
+              <ul className="project-tech">
+                {node.tech.map(tech => (
+                  <li key={tech} className="tech-item">
+                    {tech}
+                  </li>
+                ))}
+              </ul>
               <p>{node.description}</p>
-              <a href={node.githubUrl}>Source Code</a>
-              <a href={node.liveUrl}>Project Demo</a>
+              <Button
+                variant="contained"
+                className="project-button"
+                href={node.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {<FaGithub />}
+                View Source {<FaExternalLinkAlt />}
+              </Button>
+              <Button
+                variant="contained"
+                className="project-button"
+                href={node.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Live Demo {<FaExternalLinkAlt />}
+              </Button>
             </div>
           </div>
         ))}
