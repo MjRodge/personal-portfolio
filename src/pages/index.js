@@ -36,8 +36,8 @@ export const projectQuery = graphql`
           name
           publishedDate
           image {
-            fixed(width: 100) {
-              ...GatsbyContentfulFixed
+            fluid(maxWidth: 1600, maxHeight: 1600) {
+              ...GatsbyContentfulFluid
             }
           }
           githubUrl
