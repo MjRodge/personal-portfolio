@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { FaLinkedin, FaGithub } from 'react-icons/fa'
 import Headroom from 'react-headroom'
-import './styles/menubar.css'
+import './styles/header.css'
 
 class Header extends React.Component {
   render() {
@@ -11,14 +11,18 @@ class Header extends React.Component {
         <div id="navbar">
           <ul id="navList">
             <li>
-              <button id="home-nav" className="nav-button name-nav">
-                Michael J. Rodgers
-              </button>
+              <a href="#hero">
+                <button id="home-nav" className="nav-button name-nav">
+                  Michael J. Rodgers
+                </button>
+              </a>
             </li>
             <li>
-              <button id="portfolio-nav" className="nav-button nav-item">
-                PORTFOLIO
-              </button>
+              <a href="#projects-container">
+                <button id="portfolio-nav" className="nav-button nav-item">
+                  PORTFOLIO
+                </button>
+              </a>
             </li>
             <li>
               <button id="contact-nav" className="nav-button nav-item">
