@@ -1,0 +1,11 @@
+#hero {
+  position: relative;
+  top: -75px;
+  height: calc(100vh);
+  max-width: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-image: url(https://mjrodge.me/vectors/forest-background.svg);
+}
