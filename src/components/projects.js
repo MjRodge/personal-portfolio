@@ -15,35 +15,45 @@ class Projects extends React.Component {
         {projects.map(({ node }, i) => (
           <div className="project" key={i}>
             <Img fluid={node.image.fluid} className="project-image" />
+
             <div className="project-info">
-              <h2>{node.name}</h2>
-              <ul className="project-tech">
-                {node.tech.map(tech => (
-                  <li key={tech} className="tech-item">
-                    {tech}
-                  </li>
-                ))}
-              </ul>
-              <p>{node.description}</p>
-              <Button
-                variant="contained"
-                className="project-button"
-                href={node.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {<FaGithub />}
-                View Source {<FaExternalLinkAlt />}
-              </Button>
-              <Button
-                variant="contained"
-                className="project-button"
-                href={node.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Live Demo {<FaExternalLinkAlt />}
-              </Button>
+              <Paper className="project-paper">
+                <h2>{node.name}</h2>
+                <hr />
+                <ul className="project-tech">
+                  {node.tech.map(tech => (
+                    <li key={tech} className="tech-item">
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
+                <p>{node.description}</p>
+                <Button
+                  variant="contained"
+                  className="project-button"
+                  href={node.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {<FaGithub className="project-icon project-icon-github" />}
+                  View Source{' '}
+                  {
+                    <FaExternalLinkAlt className="project-icon project-icon-external" />
+                  }
+                </Button>
+                <Button
+                  variant="contained"
+                  className="project-button"
+                  href={node.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live Demo{' '}
+                  {
+                    <FaExternalLinkAlt className="project-icon project-icon-external" />
+                  }
+                </Button>
+              </Paper>
             </div>
           </div>
         ))}

@@ -1,10 +1,15 @@
+#projects-container {
+  padding-top: 1.5rem;
+}
 .project {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   margin: 26px;
 }
-
+.project-paper {
+  padding: 0.75rem;
+}
 .project-info {
   width: 50%;
   min-width: 250px;
@@ -15,6 +20,43 @@
   min-width: 250px;
   margin: auto;
 }
+
+.project-icon {
+  font-size: 1.1rem;
+}
+.project-icon-external {
+  margin: 0 0 0.25rem 0.25rem;
+}
+.project-icon-github {
+  margin: 0 0.25rem 0.15rem 0;
+}
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  font-size: 0.85rem;
+}
+.tech-item {
+  background-color: #297a66;
+  color: #ffffff;
+  font-style: italic;
+  border-radius: 0.3rem;
+  margin: 0 0.25rem 0.25rem 0;
+  padding: 0.1rem 0.45rem 0.1rem 0.35rem;
+  -webkit-box-shadow: 1px 1px 7px 0px rgba(51, 51, 51, 0.5);
+  -moz-box-shadow: 1px 1px 7px 0px rgba(51, 51, 51, 0.5);
+  box-shadow: 1px 1px 7px 0px rgba(51, 51, 51, 0.5);
+}
+
+.project-button {
+  margin: 0.25rem !important;
+  background-color: #297a66 !important;
+  color: #ffffff !important;
+}
+.project-button:hover {
+  background-color: #004d3c !important;
+}
+
 @media only screen and (max-width: 720px) {
   .project-info {
     width: 100%;
@@ -23,25 +65,9 @@
     width: 100%;
   }
 }
-
-.project-tech {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  font-size: 0.85rem;
-}
-.tech-item {
-  background-color: aqua;
-  font-style: italic;
-  border-radius: 0.3rem;
-  margin: 0 0.25rem 0.25rem 0;
-  padding: 0.1rem 0.35rem 0.1rem 0.35rem;
-}
-
-.project-button {
-  margin: 0.25rem !important;
-  background-color: aqua !important;
-}
-.project-button:hover {
-  background-color: aquamarine !important;
+@media only screen and (min-width: 720px) {
+  #projects-container {
+    max-width: 75%;
+    margin: auto;
+  }
 }
